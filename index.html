@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./normlize.css" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<form class="color-picker" action="">
+			<fieldset>
+				<legend class="visually-hidden">Pick a color scheme</legend>
+				<label for="light" class="visually-hidden">Light theme</label>
+				<input type="radio" name="theme" id="light" checked />
+
+				<label for="blue" class="visually-hidden">Blue theme</label>
+				<input type="radio" id="blue" name="theme" />
+
+				<label for="dark" class="visually-hidden">Dark theme</label>
+				<input type="radio" id="dark" name="theme" />
+			</fieldset>
+		</form>
+
+		<p id="thanks">
+			inspired by: https://www.youtube.com/watch?v=fyuao3G-2qg (How to create
+			a theme switcher with HTML & CSS by Kevin Powell)
+		</p>
+
+		<main class="container">
+			<form action="">
+				<div class="name">
+					<label for="name">Cardholder Name </label>
+					<div>
+						<input
+							type="text"
+							name="name"
+							id="name"
+							placeholder="e.g. Jane Appleseed"
+						/>
+					</div>
+				</div>
+				<div class="number">
+					<label for="number">Card Number </label>
+					<div>
+						<input
+							type="text"
+							name="number"
+							id="number"
+							placeholder="e.g. 1234 5678 9123 0000"
+						/>
+					</div>
+				</div>
+				<div class="smallNumbers">
+					<div class="smallNumbersInput date-input">
+						<label for="month">Exp. Date (MM/YY)</label>
+						<div>
+							<input
+								type="text"
+								name="month"
+								id="month"
+								placeholder="MM"
+							/>
+							<input
+								type="text"
+								name="year"
+								id="year"
+								placeholder="YY"
+							/>
+						</div>
+					</div>
+					<div class="smallNumbersInput cvv-input">
+						<label for="cvv">CVV</label>
+						<div>
+							<input
+								type="text"
+								name="cvv"
+								id="cvv"
+								placeholder="e.g. 123"
+							/>
+						</div>
+					</div>
+				</div>
+
+				<div class="confirm">
+					<button type="submit">CONFIRM</button>
+				</div>
+			</form>
+		</main>
+		<script src="./script.js"></script>
+	</body>
+</html>

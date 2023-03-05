@@ -1,0 +1,199 @@
+:root {
+	--main-bg-colour: #faf9f6;
+	--input-bg-colour: #ffffff;
+	--main-text-colour: #000000;
+	--placeholder-colour: #555555;
+	--button-bg-colour: #000000;
+	--button-hover-bg-colour: #242323;
+	--button-text-colour: #ffffff;
+	--input-border-colour: 2px solid #d0d0d0;
+	--input-border-focus-colour: 2px solid #ec6b30;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.container {
+	background-color: var(--main-bg-colour);
+	display: flex;
+	height: calc(100vh - 2rem);
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+	color: var(--main-text-colour);
+}
+
+.smallNumbers .smallNumbersInput {
+	display: inline-block;
+}
+
+.smallNumbers p {
+	/* background-color: green; */
+}
+
+form > div {
+	margin-bottom: 1em;
+}
+
+input {
+	margin: 5px 0;
+}
+
+.smallNumbers .date-input {
+	width: 55%;
+}
+
+.cvv-input {
+	width: 44%;
+}
+
+#name,
+#number,
+#cvv {
+	width: 100%;
+}
+
+#month,
+#year {
+	width: 30%;
+}
+
+#year {
+	margin-left: 10px;
+}
+input {
+	border: none;
+}
+
+input {
+	padding: 10px 15px;
+	border: var(--input-border-colour);
+	background-color: var(--input-bg-colour);
+	border-radius: 5px;
+}
+
+input:focus,
+input:focus-visible,
+input:active,
+input:hover {
+	outline: none;
+	border: var(--input-border-focus-colour);
+	/* border: 2px solid purple; */
+	transition: none;
+	/* border: var(--inputfocus); */
+}
+
+input::placeholder {
+	outline: none;
+	font-size: 1rem;
+	color: var(--placeholder-colour);
+	/* color: red; */
+}
+
+button {
+	display: flex;
+	color: var(--button-text-colour);
+	font-size: 1.3rem;
+	width: 100%;
+	padding: 0.5em 0;
+	background-color: var(--button-bg-colour);
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	border: none;
+}
+
+button:hover {
+	background-color: var(--button-hover-bg-colour);
+}
+
+/* change themes */
+
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+.color-picker {
+	background-color: var(--main-bg-colour);
+}
+
+.color-picker > fieldset {
+	display: flex;
+	border: 0;
+	gap: 2rem;
+	width: fit-content;
+	background: rgb(141, 140, 140);
+	padding: 1rem 3rem;
+	margin-inline: auto;
+	border-radius: 0 0 1rem 1rem;
+	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.color-picker input[type="radio"] {
+	appearance: none;
+	width: 1.5rem;
+	height: 1.5rem;
+	outline: 3px solid var(--radio-color, --main-bg-colour);
+	outline-offset: 3px;
+	border: none;
+	border-radius: 50%;
+}
+
+.color-picker input[type="radio"]:checked {
+	background-color: var(--radio-color);
+}
+
+.color-picker input[type="radio"]#light {
+	--radio-color: #b9b6ae;
+}
+
+.color-picker input[type="radio"]#blue {
+	--radio-color: #345995;
+}
+
+.color-picker input[type="radio"]#dark {
+	--radio-color: #121212;
+}
+
+.blue,
+:root:has(#blue:checked) {
+	--main-bg-colour: #345995;
+	--input-bg-colour: #fff;
+	--main-text-colour: #fff;
+	--placeholder-colour: #000;
+	--button-bg-colour: #ca1551;
+	--button-hover-bg-colour: rgb(139, 67, 67);
+	--button-text-colour: #fff;
+	--input-border-colour: 2px solid #d0d0d0;
+	--input-border-focus-colour: 2px solid #03cea4;
+}
+
+.dark,
+:root:has(#dark:checked) {
+	--main-bg-colour: #121212;
+	--input-bg-colour: #ffffff;
+	--main-text-colour: #fff;
+	--placeholder-colour: #555555;
+	--button-bg-colour: #03dac6;
+	--button-hover-bg-colour: #c7fff9;
+	--button-text-colour: #fff;
+	--input-border-colour: 2px solid #fff;
+	--input-border-focus-colour: 2px solid #bb86fc;
+}
+
+#thanks {
+	display: flex;
+	justify-content: center;
+	background-color: var(--main-bg-colour);
+	color: var(--main-text-colour);
+}
